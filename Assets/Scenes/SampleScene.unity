@@ -342,5 +342,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5fca420aff130347bc5f9199c62aefd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _spawnRateEnemies: 2
-  Template: {fileID: 8067003950484452567, guid: d139df82bbb71314cbd2790dc9ff6e75, type: 3}
+  _spawnRate: 2
+  _template: {fileID: 8067003950484452567, guid: d139df82bbb71314cbd2790dc9ff6e75, type: 3}
