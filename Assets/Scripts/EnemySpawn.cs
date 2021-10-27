@@ -5,7 +5,7 @@ using UnityEngine;
 public class EnemySpawn : MonoBehaviour
 {
     [SerializeField] private float _spawnRate;
-    [SerializeField] private GameObject _template;
+    [SerializeField] private Enemy _template;
 
     private Transform[] _spawnPoints;
     private WaitForSecondsRealtime _waitForSecondsRealtime;

@@ -343,4 +343,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _spawnRate: 2
-  _template: {fileID: 8067003950484452567, guid: d139df82bbb71314cbd2790dc9ff6e75, type: 3}
+  _template: {fileID: 8067003950484452566, guid: d139df82bbb71314cbd2790dc9ff6e75, type: 3}
