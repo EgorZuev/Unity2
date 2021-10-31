@@ -1,5 +1,4 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemySpawn : MonoBehaviour
@@ -8,7 +7,6 @@ public class EnemySpawn : MonoBehaviour
     [SerializeField] private Enemy _template;
 
     private Transform[] _spawnPoints;
-    private WaitForSecondsRealtime _waitForSecondsRealtime;
 
     private void Start()
     {
@@ -19,20 +17,21 @@ public class EnemySpawn : MonoBehaviour
             _spawnPoints[i] = transform.GetChild(i);
         }
 
-        _waitForSecondsRealtime = new WaitForSecondsRealtime(_spawnRate);
+        
 
         StartCoroutine(SpawnEnemies());
     }
 
     private IEnumerator SpawnEnemies()
     {
+        WaitForSecondsRealtime waitForSecondsRealtime = new WaitForSecondsRealtime(_spawnRate);
         bool isActive = true;
         while (isActive)
         {
             for (int i = 0; i < _spawnPoints.Length; i++)
             {
                 Instantiate(_template, _spawnPoints[i].position, Quaternion.identity);
-                yield return _waitForSecondsRealtime;
+                yield return waitForSecondsRealtime;
             }
         }
     }
