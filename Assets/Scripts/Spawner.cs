@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemySpawn : MonoBehaviour
+public class Spawner : MonoBehaviour
 {
     [SerializeField] private float _spawnRate;
     [SerializeField] private Enemy _template;
@@ -16,15 +16,12 @@ public class EnemySpawn : MonoBehaviour
         {
             _spawnPoints[i] = transform.GetChild(i);
         }
-
-        
-
         StartCoroutine(SpawnEnemies());
     }
 
     private IEnumerator SpawnEnemies()
     {
-        WaitForSecondsRealtime waitForSecondsRealtime = new WaitForSecondsRealtime(_spawnRate);
+        var waitForSecondsRealtime = new WaitForSecondsRealtime(_spawnRate);
         bool isActive = true;
         while (isActive)
         {
